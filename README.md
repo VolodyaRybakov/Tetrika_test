@@ -11,7 +11,7 @@
 
 ```python
 def search_pairs(array, k):
-....
+...
 
 
 print(search_pairs([1, 2, 6, 5, 3, 4, 7, 8, 3, 2], 5))
