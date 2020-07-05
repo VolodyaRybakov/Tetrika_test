@@ -25,22 +25,22 @@ def heap_sort(array):
         heapify(array, i, 0)
 
 
-def get_alphabet_sum(word):
-    summa = 0
-    for sym in word:
-        summa += ord(sym.upper())-64
+def get_alphabet_amount(word):
+    amount = 0
+    for symbol in word:
+        amount += ord(symbol.upper())-64
 
-    return summa
+    return amount
 
 
 array = []
 with open('names.txt', 'r') as names:
-    array = ','.join(names.readlines()).replace('"', '').split(',')
+    array = names.readline().replace('"', '').split(',')
 
 heap_sort(array)
 result = 0
 for i, name in enumerate(array):
-    result += get_alphabet_sum(name)*i
+    result += get_alphabet_amount(name)*i
 
 print(result)
 
